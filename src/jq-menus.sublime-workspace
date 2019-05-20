@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"swip",
+				"swiperSlides"
+			],
+			[
 				"auto",
 				"autoplay\tAttr"
 			],
@@ -510,10 +514,6 @@
 			[
 				"conta",
 				"container-fluid"
-			],
-			[
-				"tra",
-				"target\tAttr"
 			]
 		]
 	},
@@ -776,17 +776,19 @@
 	"file_history":
 	[
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css/app.scss",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/main.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package.json",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA1.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpB1.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Home.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Member.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router/routers.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Nofound.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/index.html",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/main.js",
 		"/data/projects-coding/php/nodejs/cli-iview/src/main.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package.json",
 		"/data/projects-coding/ios/jq-menus/set.html",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/js/ydui.flexible.js",
 		"/data/projects-coding/ios/jq-menus/css/mobile.scss",
@@ -900,13 +902,11 @@
 		"/D/wwwroot/xty/resources/views/home/user/login.blade.php",
 		"/D/志功网络/ltjz.txt",
 		"/F/soft/FlashFXP4/Cache/~flashfxp/580834EF_edit.tmp/config.inc.php",
-		"/F/soft/FlashFXP4/Cache/~flashfxp/30AFC5E0_edit.tmp/config_global.php",
-		"/C/Users/Administrator/Desktop/ltjz.txt",
-		"/D/wwwroot/xty/resources/views/admin/component/file.blade.php"
+		"/F/soft/FlashFXP4/Cache/~flashfxp/30AFC5E0_edit.tmp/config_global.php"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -920,6 +920,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"tempdata",
+			";\n",
+			"26rem",
 			"video-zz",
 			"autoplay",
 			"Welcome",

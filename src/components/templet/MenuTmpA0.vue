@@ -1,19 +1,13 @@
 <template>
-  <div id="menutmpa1" class="pr">
+  <div id="menutmpa1">
     <img :data-src="'img/220345b9143f4175a7f3d8abb2c630b9/' + tempdata.templetImgUrl" class="swiper-lazy menuImg" width="100%" height="auto" alt="">
-    <div class="btn-addcart b-a-1"></div>
   </div>
 </template>
 
-<style>
-    .b-a-1 {
-        left:500px; top:100px;
-    }
-</style>
 
 <script>
 export default {
-	name: 'MenuTmpA1',
+	name: 'MenuTmpA0',
     data() {
         return {
             // 进来的数据

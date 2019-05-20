@@ -1,9 +1,9 @@
 <template>
   <div id="menuitemlist">
     <swiper :options="swiperOption1">
-          <swiper-slide class="swiper-slide" v-for="item in tempdata.menuItemTempletList" style="background:#ccc;">
+          <swiper-slide class="swiper-slide" v-for="item in templetList.menuItemTempletList" style="background:#ccc;">
             <!-- 开始对应模版 -->
-            <menu-tmp-a1 v-if="item.templetType == '1'" :tempdata="item"></menu-tmp-a1>
+            <menu-tmp-a0 v-if="item.templetType == '1'" :tempdata="item"></menu-tmp-a0>
             <menu-tmp-b1 v-if="item.templetType != '1'" :tempdata="item"></menu-tmp-b1>
           </swiper-slide>
     </swiper>
@@ -14,13 +14,14 @@
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import MenuTmpA1 from './MenuTmpA1.vue'
+import MenuTmpA0 from './MenuTmpA0.vue'
 import MenuTmpB1 from './MenuTmpB1.vue'
 export default {
 	name: 'MenuItemList',
     data() {
         return {
             swiperOption1: {
+                useCapture:false,
                 nested:true,
                 loadPrevNext: true,
                 lazy: {
@@ -29,11 +30,11 @@ export default {
                 },
             },
             // 进来的数据
-            tempdata: [],
+            templetList: [],
         }
     },
     props: {
-        tempdata:{
+        templetList:{
             type: Object,
             default: function () {
                 return [];
@@ -45,7 +46,7 @@ export default {
     components: {
         swiper,
         swiperSlide,
-        MenuTmpA1,
+        MenuTmpA0,
         MenuTmpB1,
     },
     watch:{

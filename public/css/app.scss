@@ -301,7 +301,10 @@ input {
 .menuImg {
     width:10.0rem; height:13.33rem;
 }
-
+.btn-addcart {
+    width:0.5rem; height:0.5rem; overflow: hidden; display: block; background: url('../img/icon_addtocart@2x.png') left top no-repeat; background-size: 100%; position: absolute;
+    z-index:100000;
+}
 
 
 
