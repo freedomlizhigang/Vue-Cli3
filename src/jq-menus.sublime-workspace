@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"z",
+				"z-index"
+			],
+			[
 				"swip",
 				"swiperSlides"
 			],
@@ -510,10 +514,6 @@
 			[
 				"cha",
 				"change\t.change()"
-			],
-			[
-				"conta",
-				"container-fluid"
 			]
 		]
 	},
@@ -771,22 +771,29 @@
 	[
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router"
 	],
 	"file_history":
 	[
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css/app.scss",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/main.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package.json",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA1.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpB1.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/jihua.md",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Home.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/main.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Nofound.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package.json",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package-lock.json",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/BtnAddcart.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpB1.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css/app.scss",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuItemList.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA1.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA0.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA2.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Member.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router/routers.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Nofound.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/index.html",
 		"/data/projects-coding/php/nodejs/cli-iview/src/main.js",
 		"/data/projects-coding/ios/jq-menus/set.html",
@@ -896,17 +903,11 @@
 		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_safedetail.blade.php",
 		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_leakdetail.blade.php",
 		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_leaklist.blade.php",
-		"/D/希夷/福鹿未来/服务器信息.txt",
-		"/D/希夷/王小我/北京当代/info.txt",
-		"/D/wwwroot/xty/resources/views/home/user/register.blade.php",
-		"/D/wwwroot/xty/resources/views/home/user/login.blade.php",
-		"/D/志功网络/ltjz.txt",
-		"/F/soft/FlashFXP4/Cache/~flashfxp/580834EF_edit.tmp/config.inc.php",
-		"/F/soft/FlashFXP4/Cache/~flashfxp/30AFC5E0_edit.tmp/config_global.php"
+		"/D/希夷/福鹿未来/服务器信息.txt"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -920,6 +921,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" ",
+			"<img :data-src=\"'img/220345b9143f4175a7f3d8abb2c630b9/' + tempdata.templetImgUrl\" class=\"swiper-lazy menuImg\" width=\"100%\" height=\"auto\" alt=\"\">",
+			"dishindex",
+			"item",
+			"){\n",
+			"a1",
+			" ps",
 			"tempdata",
 			";\n",
 			"26rem",

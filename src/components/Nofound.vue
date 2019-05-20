@@ -1,10 +1,7 @@
 <template>
-    <Alert type="warning" show-icon>
-        A warning prompt
-        <template slot="desc">
-            Content of prompt. Content of prompt. Content of prompt.
-        </template>
-    </Alert>
+    <div id="nofound">
+        A warning prompt Content of prompt. Content of prompt. Content of prompt.
+    </div>
 </template>
 
 <script>

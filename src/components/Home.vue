@@ -395,32 +395,16 @@
                 </div>
             </div>
         </section>
-        <!-- 开台并点餐 -->
-        <Modal v-model="showOpenStatus" title="添加角色" @on-ok="createOpen('roleValidate')" :loading="loading">
-        <Form :model="role" ref="roleValidate" :rules="roleValidate" action="javascript:void(0)">
-            <FormItem label="角色名称" prop="name">
-                <Input v-model="role.name" placeholder="输入角色名称..."></Input>
-            </FormItem>
-        </Form>
-    </Modal>
     </div>
 </template>
 <script>
+    import { MessageBox } from 'mint-ui';
     import router from '.././router'
     import { LOGOUT,LOGIN } from '.././vuex/mutation_types'
     export default {
         name: 'Home',
         data () {
             return {
-                showOpenStatus:false,
-                role:{
-                    name:'',
-                },
-                roleValidate: {
-                    name: [
-                        { required: true, message: '角色名称必须填写', trigger: 'blur' }
-                    ]
-                },
             };
         },
         computed: {
@@ -430,11 +414,11 @@
         },
         methods:{
             showOpen(){
-                this.showOpenStatus = !this.showOpenStatus;
-            },
-            // 添加
-            createOpen(name){
-                router.push('/member');
+                // this.showOpenStatus = !this.showOpenStatus;
+                MessageBox.prompt('请输入姓名','').then(({ value, action }) => {
+                    console.log(value + ' action: ' + action);
+                    router.push('/member');
+                });
             },
         }
   }

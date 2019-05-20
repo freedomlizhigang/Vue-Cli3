@@ -2,9 +2,9 @@ import Vue from 'vue'
 import router from './router/index'
 import VueAxios from 'vue-axios'
 // 样式
-import iView from 'iview';
-import 'iview/dist/styles/iview.css';
-Vue.use(iView);
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
 // 各API接口
 import api from './api/api' // 导入api接口
 // 首页模板
