@@ -1,0 +1,2 @@
+// 设置字体
+function htmlFz(){var dpr, rem, f;var docEl = document.documentElement;var f = document.querySelector('html');rem = docEl.clientWidth > 1024 ? 102.4 : (docEl.clientWidth / 10);window.onresize = function(){htmlFz();};f.style.fontSize = rem + 'px';} htmlFz();

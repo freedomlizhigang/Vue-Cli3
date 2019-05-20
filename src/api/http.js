@@ -5,7 +5,6 @@
 import axios from 'axios';
 import router from '.././router';
 import store from '.././vuex/store'
-import iView from 'iview';
 
 // 根目录
 // axios.defaults.baseURL = 'http://www.jq-kq.com';

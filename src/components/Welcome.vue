@@ -1,0 +1,30 @@
+<template>
+  <div id="welcome">
+    <img src="img/1.gif" class="welcome-video">
+    <div class="video-zz" @click="startMenus()"></div>
+  </div>
+</template>
+
+
+<script>
+import router from '.././router'
+import { LOGOUT,LOGIN } from '.././vuex/mutation_types'
+export default {
+	name: 'Welcome',
+    data() {
+        return {
+        }
+    },
+    components: {
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+        startMenus(){
+            router.push('/menus');
+        }
+    }
+}
+</script>
