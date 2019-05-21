@@ -5,6 +5,8 @@ import Member from '.././components/Member.vue'
 import Welcome from '.././components/Welcome.vue'
 import Menus from '.././components/Menus.vue'
 import CreateOrder from '.././components/CreateOrder.vue'
+import Pay from '.././components/Pay.vue'
+import Search from '.././components/Search.vue'
 
 export default [
     // 首页
@@ -37,7 +39,7 @@ export default [
     },
     // 点餐
     {
-      path: '/menus',
+      path: '/menus/:findex?/:sindex?',
       name: 'Menus',
       component: Menus,
       meta: { requiresAuth: true }
@@ -47,6 +49,20 @@ export default [
       path: '/createorder',
       name: 'CreateOrder',
       component: CreateOrder,
+      meta: { requiresAuth: true }
+    },
+    // 结算
+    {
+      path: '/pay',
+      name: 'Pay',
+      component: Pay,
+      meta: { requiresAuth: true }
+    },
+    // 搜索
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search,
       meta: { requiresAuth: true }
     },
     // 其它404

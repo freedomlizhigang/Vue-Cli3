@@ -1,15 +1,27 @@
 <template>
   <div id="menus" class="header-padding">
     <!-- 头部导航 -->
-    <header class="topnav">
-        <router-link to="/" class="backhome"></router-link>
+    <header class="topnav pr">
+        <router-link to="/member" class="tomember">会员登录享受更多优惠</router-link>
+        <span class="nav-titles">菜单</span>
+        <input type="text" value="搜索菜品" class="searchdish">
+        <router-link to="/createorder" class="createorder"></router-link>
+        <router-link to="/" class="nav-backhome"></router-link>
     </header>
+    <!-- 循环出图片来 -->
     <swiper :options="swiperOption" ref="mySwiper" v-if="show">
         <swiper-slide v-for="(item, index) in swiperSlides">
-          <menu-item-list :templetList="item"></menu-item-list>
+          <menu-item-list :templetList="item" :findex="index" :pindex="findex" :toindex="sindex"></menu-item-list>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination" ref="pagination"></div>
     </swiper>
+    <!-- 购物车 -->
+    <div class="cartdish">
+        <img src="img/list_unopen.png" class="list-unopen" @click="slideOpen()" alt="">
+        <div class="list-open">
+            
+        </div>
+    </div>
   </div>
 </template>
 
@@ -8235,12 +8247,22 @@ export default {
                     },
                 },
             },
+            findex:0,
+            sindex:0,
         }
     },
     components: {
         swiper,
         swiperSlide,
         MenuItemList,
+    },
+    created: function(){
+        if (this.$route.params.findex != "undefined") {
+            this.findex = this.$route.params.findex
+        }
+        if (this.$route.params.sindex != "undefined") {
+            this.sindex = this.$route.params.sindex
+        }
     },
     computed: {
       swiper() {
@@ -8260,9 +8282,16 @@ export default {
           },
         };
         that.show = true;
+        if (that.findex != 0) {
+            setTimeout(()=>{
+                that.$refs.mySwiper.swiper.slideTo(that.findex, 1000, true); 
+            },1000);
+        }
     },
     methods: {
-        
+        slideOpen(){
+            $(".list-open").slideToggle("fast");
+        }
     }
 }
 </script>

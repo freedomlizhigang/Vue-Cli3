@@ -305,6 +305,30 @@ input {
     width:0.5rem; height:0.5rem; overflow: hidden; display: block; background: url('../img/icon_addtocart@2x.png') left top no-repeat; background-size: 100%; position: absolute;
     z-index:100000;
 }
+.tomember {
+    width:1.4rem; height:0.4rem; background: url('../img/icon_user@2x.png') left top no-repeat; background-size:0.4rem 0.4rem; display: block; position: absolute; left: 0.07rem; top: 0.04rem; color:#fff; text-indent: 0.45rem; line-height: 0.4rem;
+}
+.nav-titles {
+    width:2em; position: absolute; left:50%; margin-left: -1em; color:#fff; line-height: 0.5rem;
+}
+.searchdish {
+    width:1.9rem; height:0.4rem; background: url('../img/icon_search@2x.png') left top no-repeat; background-size:0.3rem 0.3rem; background-position: 0.05rem 0.05rem; display: block; position: absolute; right: 1.27rem; top: 0.04rem; color:#fff; border-radius:0.2rem; border:#fff solid 1px; text-indent: 0.45rem; line-height: 0.4rem;
+}
+.createorder {
+    width:.4rem; height:0.4rem; background: url('../img/icon_cart@2x.png') left top no-repeat; background-size:0.4rem 0.4rem; display: block; position: absolute; right: 0.67rem; top: 0.04rem; color:#fff; text-indent: 0.45rem; line-height: 0.4rem;
+}
+.nav-backhome {
+    width:.4rem; height:0.4rem; background: url('../img/icon_head_manage@2x.png') left top no-repeat; background-size:0.4rem 0.4rem; display: block; position: absolute; right: 0.07rem; top: 0.04rem; color:#fff; text-indent: 0.45rem; line-height: 0.4rem;
+}
+.cartdish {
+    width:3.04rem; top:0.78rem; left:6.4rem; position: absolute; z-index:10000; font-size: 0;
+}
+.list-open {
+    width:3.04rem; height:13.96rem; background: url('../img/list_open.png') left top no-repeat; background-size: 100%; position: absolute; top:0; left:0; z-index:1; display: none;
+}
+.list-unopen {
+    width:3.04rem; height:0.46rem; position: absolute; z-index:2;
+}
 // 下单
 .tableinfo {
     text-align: center; line-height: 0.59rem; height:0.59rem; background: rgba(0,0,0,.3); color:#fff; font-size: 14px;
@@ -355,8 +379,41 @@ input {
         .total-order { width:3rem; position: absolute; left:0; top:0; text-indent: 10px; opacity:0;}
     }
 }
-
-
+// 支付
+.a-c-l-pay {
+    height:11.25rem;
+}
+// 搜索
+.searchdish-search {
+    width:8.8rem; left:0.2rem;
+}
+.cancel {
+    font-size: 16px; width:0.5rem; line-height: 0.4rem; top:0.05rem; right:0.2rem; color:#fff; position: absolute;
+}
+.hotsearch {
+    background: #fff; padding:0.26rem 0.26rem;
+}
+.iconhot {
+    width:0.31rem; height:0.31rem; float: left; margin-right: 0.2rem;
+}
+.hotsearch h3 {
+    margin-bottom: 0.13rem;
+}
+.hs-l-item {
+    border:#eee solid 1px; display: inline-block; float: left; margin:0.13rem 0.13rem 0 0; padding:0 0.13rem; line-height: 1.6;
+}
+.s-r-item {
+    background: #C4C4C7; width:4.49rem; height:4.17rem; float: left; margin:0.39rem 0.24rem 0 0.24rem; border-radius:0.26rem; position: relative; z-index:1; overflow: hidden;
+}
+.s-r-item-footer {
+    line-height: 0.7rem; height:0.7rem; color:#fff; background: rgba(0,0,0,.4); position: absolute; left:0; bottom:0; right:0; padding:0 0.26rem; font-size: 16px;
+}
+.s-r-item-img {
+    width:4.49rem; height:4.17rem; position: absolute; left:0; top:0;
+}
+.s-r-item-price {
+    float: right;
+}
 
 
 
