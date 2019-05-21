@@ -305,8 +305,56 @@ input {
     width:0.5rem; height:0.5rem; overflow: hidden; display: block; background: url('../img/icon_addtocart@2x.png') left top no-repeat; background-size: 100%; position: absolute;
     z-index:100000;
 }
-
-
+// 下单
+.tableinfo {
+    text-align: center; line-height: 0.59rem; height:0.59rem; background: rgba(0,0,0,.3); color:#fff; font-size: 14px;
+}
+.order-container {
+    width:9.56rem; height:11.71rem; overflow-y: auto; margin:0.22rem auto; background: #FFFFFF; border-radius:0.13rem; z-index:1; padding-bottom: 1rem;
+    .o-c-top {
+        background: #E7E6E6; line-height: 0.7rem; height:0.7rem; color:#333; padding:0 0.26rem;
+    }
+    .o-c-dishlist {
+        padding:0 0.26rem; color:#333;margin:0.13rem 0; border-bottom:#E7E7E7 solid 1px; padding-bottom: 0.13rem; 
+    }
+    .sort {
+        width:0.8rem; display: inline-block; float: left; line-height: 0.81rem;
+    }
+    .dish {
+        width:3rem;display: inline-block; float: left; line-height: 0.81rem;
+    }
+    .num {
+        display: inline-block; width:1.2rem; float: left; line-height: 0.81rem;
+    }
+    .dishimg {
+        width:0.81rem; height:0.81rem; border-radius:0.07rem; border:#E7E7E7 solid 3px; margin-right: 0.13rem; float: left;
+    }
+    .price ,.total ,.remark ,.status ,.btn-groups {
+        display: inline-block; width:.8rem; float: left; line-height: 0.81rem;
+    }
+    .o-c-canju,.o-c-remark,.o-c-tj {
+        padding:0 0.26rem; margin:0.13rem 0; border-bottom:#E7E7E7 solid 1px; padding-bottom: 0.13rem; font-weight: normal; line-height:.4rem;
+        .sort {
+            width:3.8rem; line-height:.4rem;
+        }
+        .titles {
+            width:7.1rem; display: inline-block; float: left;
+        }
+        .remark ,.status ,.num ,.dish ,.price ,.total {
+            line-height: .4rem;
+        }
+    }
+    .o-c-footer {
+        background: #E7E6E6; line-height: 0.7rem; height:0.7rem; color:#333; padding:0 0.26rem; position: absolute; bottom:0; left:0; right:0;
+        .c-menu {
+            width:1.5rem; height:0.55rem; line-height: 0.55rem; text-align: center; overflow: hidden; background: #559E27; border-radius:8px; display: inline-block; color:#fff; margin-top: 0.09rem; margin-left: 5.8rem; float: left;
+        }
+        .btn-create {
+            width:1.5rem; height:0.55rem; line-height: 0.55rem; text-align: center; overflow: hidden; background: #317CBE; border-radius:8px; display: inline-block; color:#fff; margin-top: 0.09rem; margin-left: 0.2rem; float: left;
+        }
+        .total-order { width:3rem; position: absolute; left:0; top:0; text-indent: 10px; opacity:0;}
+    }
+}
 
 
 

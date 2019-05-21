@@ -4,6 +4,7 @@ import Home from '.././components/Home.vue'
 import Member from '.././components/Member.vue'
 import Welcome from '.././components/Welcome.vue'
 import Menus from '.././components/Menus.vue'
+import CreateOrder from '.././components/CreateOrder.vue'
 
 export default [
     // 首页
@@ -39,6 +40,13 @@ export default [
       path: '/menus',
       name: 'Menus',
       component: Menus,
+      meta: { requiresAuth: true }
+    },
+    // 提交订单
+    {
+      path: '/createorder',
+      name: 'CreateOrder',
+      component: CreateOrder,
       meta: { requiresAuth: true }
     },
     // 其它404

@@ -395,16 +395,24 @@
                 </div>
             </div>
         </section>
+        <!-- 添加的弹出 -->
+        <Modal v-model="showOpenStatus" title="编辑开台" @on-ok="openTable()" :loading="loading">
+            <Form ref="openForm" action="javascript:void(0)">
+                <FormItem label="用餐人数">
+                    <Input placeholder="输入用餐人数..."></Input>
+                </FormItem>
+            </Form>
+        </Modal>
     </div>
 </template>
 <script>
-    import { MessageBox } from 'mint-ui';
     import router from '.././router'
     import { LOGOUT,LOGIN } from '.././vuex/mutation_types'
     export default {
         name: 'Home',
         data () {
             return {
+                showOpenStatus:false,
             };
         },
         computed: {
@@ -414,11 +422,10 @@
         },
         methods:{
             showOpen(){
-                // this.showOpenStatus = !this.showOpenStatus;
-                MessageBox.prompt('请输入姓名','').then(({ value, action }) => {
-                    console.log(value + ' action: ' + action);
-                    router.push('/member');
-                });
+                this.showOpenStatus = !this.showOpenStatus;
+            },
+            openTable(value){
+                router.push('/member');
             },
         }
   }
