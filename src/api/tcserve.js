@@ -8,7 +8,8 @@ import store from '.././vuex/store'
 import iView from 'iview';
 
 // 根目录
-axios.defaults.baseURL = 'http://jqdc.137idea.com:8089';
+const baseurl = store.getters.serveurl;
+axios.defaults.baseURL = baseurl;
 
 /**
   * 跳转登录页

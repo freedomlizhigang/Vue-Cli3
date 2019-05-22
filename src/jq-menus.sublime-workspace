@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"par",
+				"paramsMd5"
+			],
+			[
+				"def",
+				"defaults"
+			],
+			[
+				"ser",
+				"serve"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"de",
+				"device"
+			],
+			[
 				"border",
 				"border"
 			],
@@ -122,10 +142,6 @@
 			[
 				"lat",
 				"latitude"
-			],
-			[
-				"res",
-				"result"
 			],
 			[
 				"pu",
@@ -498,22 +514,6 @@
 			[
 				"goods",
 				"goodlists"
-			],
-			[
-				"de",
-				"decrement"
-			],
-			[
-				"tot",
-				"total_prices"
-			],
-			[
-				"pays",
-				"paystatus\t(PayController.php)"
-			],
-			[
-				"toa",
-				"total_prices"
 			]
 		]
 	},
@@ -547,6 +547,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"renam",
+				"Rename File"
+			],
 			[
 				"rena",
 				"Rename File"
@@ -771,23 +775,47 @@
 	[
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router"
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css"
 	],
 	"file_history":
 	[
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/jihua.md",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuItemList.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/index.html",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css/app.scss",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Search.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router/routers.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Pay.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/CreateOrder.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Home.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/main.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/www/index.html",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/client.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/cmd5.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/package.json",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tc.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/MD5.java",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package.json",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/http.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tcserve.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/device.js",
+		"/data/projects-coding/php/nodejs/cli-iview/src/vuex/modules/user.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/dish.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/vue.config.js",
+		"/data/projects-coding/php/nodejs/cli-iview/vue.config.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/api.js",
+		"/data/projects-coding/php/nodejs/cli-iview/src/api/http.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/serve.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/server.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/tc.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Member.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Pay.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Search.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/CreateOrder.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Logout.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/mutation_types.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/store.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/config.xml",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/jihua.md",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuItemList.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router/routers.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Nofound.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package-lock.json",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/BtnAddcart.vue",
@@ -795,15 +823,10 @@
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA1.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA0.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA2.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Member.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/index.html",
 		"/data/projects-coding/php/nodejs/cli-iview/src/main.js",
 		"/data/projects-coding/ios/jq-menus/set.html",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/js/ydui.flexible.js",
 		"/data/projects-coding/ios/jq-menus/css/mobile.scss",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Logout.vue",
 		"/data/projects-coding/ios/jq-menus/index.html",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/ydui.flexible.js",
 		"/Users/lizhigang/Desktop/jihua.md",
@@ -883,27 +906,7 @@
 		"/D/wwwroot/xty/resources/views/admin/gongx/threatdata/safes/edit.blade.php",
 		"/D/wwwroot/xty/app/Models/ThreatLeak.php",
 		"/D/wwwroot/xty/app/Models/ThreatSafe.php",
-		"/D/wwwroot/xty/app/Models/ThreatWeak.php",
-		"/D/wwwroot/xty/app/Models/User.php",
-		"/C/Users/Administrator/Desktop/dsas.sql",
-		"/C/Users/Administrator/Desktop/dsas.xml",
-		"/D/wwwroot/xty/resources/views/home/page_about.blade.php",
-		"/D/wwwroot/xty/resources/views/admin/console/ad/add.blade.php",
-		"/D/wwwroot/xty/resources/views/admin/console/ad/edit.blade.php",
-		"/D/wwwroot/xty/resources/views/admin/gongx/ts/index.blade.php",
-		"/D/wwwroot/xty/resources/views/admin/gongx/threatalarm/index.blade.php",
-		"/D/wwwroot/xty/resources/views/admin/gongx/threatalarm/import.blade.php",
-		"/D/wwwroot/xty/database/migrations/2018_09_14_084751_add_scale_to_threats.php",
-		"/D/wwwroot/xty/resources/views/admin/gongx/leaks/index.blade.php",
-		"/D/wwwroot/xty/resources/views/admin/gongx/threat/index.blade.php",
-		"/D/wwwroot/xty/resources/views/admin/console/link/index.blade.php",
-		"/C/Users/Administrator/Desktop/li_types (1).sql",
-		"/D/wwwroot/xty/resources/views/home/page_contact.blade.php",
-		"/D/wwwroot/xty/resources/views/home/user/threaten_nav.blade.php",
-		"/D/wwwroot/xty/routes/webcommon.php",
-		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_weaklist.blade.php",
-		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_weakdetail.blade.php",
-		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_safelist.blade.php"
+		"/D/wwwroot/xty/app/Models/ThreatWeak.php"
 	],
 	"find":
 	{
@@ -922,6 +925,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"13.33rem",
+			"params",
+			"DevID",
+			"undefined",
+			" == 'undefined'",
+			"'undefined'",
+			"clienturl",
+			"baseurl",
+			"dish",
+			"application/x-www-form-urlencoded",
+			"client",
+			"tc",
+			"client",
+			"tc",
+			"common",
+			"cropcode",
+			"user_name",
+			"user_id",
+			"token",
+			"user_name",
+			"user_id",
+			"token",
+			"user_name",
+			"SAVE",
+			"LOGOUT",
 			"that",
 			"dishindex",
 			"findex",

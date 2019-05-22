@@ -8,7 +8,8 @@ import store from '.././vuex/store'
 import iView from 'iview';
 
 // 根目录
-axios.defaults.baseURL = 'http://jqdc.137idea.com:8089';
+const baseurl = store.getters.clienturl;
+axios.defaults.baseURL = baseurl;
 
 /**
   * 跳转登录页
@@ -19,7 +20,6 @@ const toLogin = () => {
         path: '/setting'
     });
 }
-
 /**
   * 请求失败后的错误统一处理
   * @param {Number} status 请求失败的状态码
@@ -55,12 +55,6 @@ instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlenco
   */
 instance.interceptors.request.use(
     config => {
-        // 登录流程控制中，根据本地是否存在token判断用户的登录情况
-        // 但是即使token存在，也有可能token是过期的，所以在每次的请求头中携带token
-        // 后台根据携带的token判断用户的登录情况，并返回给我们对应的状态码
-        // 而后我们可以在响应拦截器中，根据状态码进行一些统一的操作。
-        const token = store.getters.token;
-        token && (config.headers.Authorization = token);
         return config;
     },
     error => Promise.error(error))
@@ -71,44 +65,17 @@ instance.interceptors.response.use(
     res => {
         if(res.status === 200) {
             // 状态码判断
-            switch (res.data.code) {
-                // 400参数的错误
-                case 400:
-                    iView.Message.error(res.data.msg);
-                    break;
-
-                // 401: 未登录状态，跳转登录页
-                case 401:
-                    store.commit('LOGOUT');
-                    setTimeout(() => {
-                        toLogin();
-                    }, 1000);
-                    break;
-                // 402没有接口权限
-                case 402:
-                    iView.Message.error(res.data.msg);
-                    break;
-
-                // 403 输入正确，但其它相关数据有问题，拒绝继续执行
-                case 403:
-                    iView.Message.error(res.data.msg);
-                    break;
-
-                // 404请求不存在
-                case 404:
-                    iView.Message.error('请求的资源不存在...');
-                    break;
-
+            switch (res.data.Response.errorCode) {
                 // 200 正确返回
                 case 200:
-                    Promise.resolve(res)
+                    Promise.resolve(res.data.Response)
                     break;
 
                 default:
-                    iView.Message.error('服务器有点忙...');
+                    iView.Message.error(res.data.Response.Msg);
                     break;
             }
-            return res.data;
+            return res.data.Response;
         }
         else
         {

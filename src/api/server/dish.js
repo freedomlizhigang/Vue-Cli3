@@ -1,17 +1,20 @@
 /**
-  * 用户 接口的统一出口
+  * 菜谱后台的统一入口
   */
 import axios from '.././http'; // 导入http中创建的axios实例
 import qs from 'qs'; // 根据需求是否导入qs模块，把请求字段直接映射过来
-
+import store from '../.././vuex/store'
 
 // 接口请求地址
 const api = '/c-api/';
 
-const admin = {
+const dish = {
     // 列表
     list (params) {
         return axios.get(api + 'admin/list',{params: params})
+    },
+    time (params) {
+        return axios.get('/api/time')
     },
     // 添加
     create (params) {
@@ -49,4 +52,4 @@ const admin = {
 
 
 // 导出接口
-export default admin
+export default dish
