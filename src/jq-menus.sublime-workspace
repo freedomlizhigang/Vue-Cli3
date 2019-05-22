@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"border",
+				"border"
+			],
+			[
+				"show",
+				"showMarkStatus"
+			],
+			[
 				"z",
 				"z-index"
 			],
@@ -34,10 +42,6 @@
 			[
 				"a-c-r-t-",
 				"a-c-r-t-tab2\t(index.html)"
-			],
-			[
-				"border",
-				"border-radius"
 			],
 			[
 				"jpg",
@@ -510,10 +514,6 @@
 			[
 				"toa",
 				"total_prices"
-			],
-			[
-				"cha",
-				"change\t.change()"
 			]
 		]
 	},
@@ -777,23 +777,27 @@
 	"file_history":
 	[
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/jihua.md",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuItemList.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css/app.scss",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Search.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router/routers.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Pay.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/CreateOrder.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Home.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/main.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Nofound.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package.json",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/vue.config.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Nofound.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package-lock.json",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/BtnAddcart.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpB1.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css/app.scss",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuItemList.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA1.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA0.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA2.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Member.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router/routers.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/index.html",
 		"/data/projects-coding/php/nodejs/cli-iview/src/main.js",
 		"/data/projects-coding/ios/jq-menus/set.html",
@@ -899,21 +903,18 @@
 		"/D/wwwroot/xty/routes/webcommon.php",
 		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_weaklist.blade.php",
 		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_weakdetail.blade.php",
-		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_safelist.blade.php",
-		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_safedetail.blade.php",
-		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_leakdetail.blade.php",
-		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_leaklist.blade.php",
-		"/D/希夷/福鹿未来/服务器信息.txt"
+		"/D/wwwroot/xty/resources/views/home/user/threatdata/threaten_safelist.blade.php"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
 		"height": 121.0,
 		"where_history":
 		[
+			"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components"
 		]
 	},
 	"find_state":
@@ -921,6 +922,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"that",
+			"dishindex",
+			"findex",
+			"0.5",
+			"39",
+			"a-c-l-",
+			"CreateOrder",
+			"03",
+			"ref",
+			"showOpenStatus",
+			"span",
+			"showMark",
+			"0.6",
+			"mt-cell-swipe",
+			"mt-cell",
+			"Menus",
 			" ",
 			"<img :data-src=\"'img/220345b9143f4175a7f3d8abb2c630b9/' + tempdata.templetImgUrl\" class=\"swiper-lazy menuImg\" width=\"100%\" height=\"auto\" alt=\"\">",
 			"dishindex",

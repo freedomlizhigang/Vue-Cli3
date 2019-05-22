@@ -18,7 +18,6 @@
 
 <script>
 import router from '.././router'
-import { LOGOUT,LOGIN } from '.././vuex/mutation_types'
 export default {
 	name: 'Member',
     data() {

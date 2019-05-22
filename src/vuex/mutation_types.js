@@ -1,3 +1,3 @@
-// 登陆，退出
-export const LOGIN = 'LOGIN'
-export const LOGOUT = 'LOGOUT'
+// 保存，清空
+export const DEVICE = 'DEVICE'
+export const REMOVE = 'REMOVE'

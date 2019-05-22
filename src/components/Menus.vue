@@ -4,7 +4,7 @@
     <header class="topnav pr">
         <router-link to="/member" class="tomember">会员登录享受更多优惠</router-link>
         <span class="nav-titles">菜单</span>
-        <input type="text" value="搜索菜品" class="searchdish">
+        <input type="text" value="搜索菜品" class="searchdish" @click="toSearch()">
         <router-link to="/createorder" class="createorder"></router-link>
         <router-link to="/" class="nav-backhome"></router-link>
     </header>
@@ -32,7 +32,6 @@ import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import MenuItemList from './templet/MenuItemList.vue'
 import router from '.././router'
-import { LOGOUT,LOGIN } from '.././vuex/mutation_types'
 export default {
     name: "Menus",
     data() {
@@ -8289,6 +8288,9 @@ export default {
         }
     },
     methods: {
+        toSearch: function(){
+            router.push('/search')
+        },
         slideOpen(){
             $(".list-open").slideToggle("fast");
         }

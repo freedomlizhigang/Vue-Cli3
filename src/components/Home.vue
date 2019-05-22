@@ -399,7 +399,7 @@
         <Modal v-model="showOpenStatus" title="编辑开台" @on-ok="openTable()" :loading="loading">
             <Form ref="openForm" action="javascript:void(0)">
                 <FormItem label="用餐人数">
-                    <Input placeholder="输入用餐人数..."></Input>
+                    <Input placeholder="输入用餐人数..." :value="device"></Input>
                 </FormItem>
             </Form>
         </Modal>
@@ -407,21 +407,22 @@
 </template>
 <script>
     import router from '.././router'
-    import { LOGOUT,LOGIN } from '.././vuex/mutation_types'
+    import { DEVICE,REMOVE } from '.././vuex/mutation_types'
     export default {
         name: 'Home',
         data () {
             return {
                 showOpenStatus:false,
+                device:null,
             };
         },
         computed: {
         },
         created:function(){
-            
         },
         methods:{
             showOpen(){
+                this.device = device.uuid;
                 this.showOpenStatus = !this.showOpenStatus;
             },
             openTable(value){

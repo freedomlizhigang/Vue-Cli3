@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css"
 		}
 	]
 }
