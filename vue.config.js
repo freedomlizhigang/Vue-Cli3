@@ -4,4 +4,13 @@ module.exports = {
     outputDir: '../www',
     assetsDir: './',
     productionSourceMap: false,
+    // devServer: {
+    //     proxy: {
+    //         '/api/': {
+    //             target: 'http://jqdc.137idea.com:8089',
+    //             changeOrigin: true,
+    //             ws: true,
+    //         }
+    //     }
+    // }
 }

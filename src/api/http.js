@@ -7,8 +7,7 @@ import router from '.././router';
 import store from '.././vuex/store'
 import iView from 'iview';
 
-// 根目录
-axios.defaults.baseURL = 'http://jqdc.137idea.com:8089';
+
 
 /**
   * 跳转登录页
@@ -27,14 +26,6 @@ const toLogin = () => {
 const errorHandle = (status, other) => {
     // 状态码判断
     switch (status) {
-        // 401: 未登录状态，跳转登录页
-        case 401:
-            store.commit('LOGOUT');
-            setTimeout(() => {
-                toLogin();
-            }, 1000);
-            break;
-
         // 404请求不存在
         case 404:
             iView.Message.error('请求的资源不存在...');
@@ -47,20 +38,17 @@ const errorHandle = (status, other) => {
 
 // 创建axios实例
 var instance = axios.create({timeout: 1000 * 12});
+// 根目录
+instance.defaults.baseURL = 'http://jqdc.137idea.com:8089';
 // 设置post请求头
-instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+instance.defaults.headers.post['Content-Type'] = 'application/json';
 /**
   * 请求拦截器
   * 每次请求前，如果存在token则在请求头中携带token
   */
 instance.interceptors.request.use(
     config => {
-        // 登录流程控制中，根据本地是否存在token判断用户的登录情况
-        // 但是即使token存在，也有可能token是过期的，所以在每次的请求头中携带token
-        // 后台根据携带的token判断用户的登录情况，并返回给我们对应的状态码
-        // 而后我们可以在响应拦截器中，根据状态码进行一些统一的操作。
-        const token = store.getters.token;
-        token && (config.headers.Authorization = token);
+        config.headers.appKey = '6b9dee28-8ee9-4e99-8a4c-15864a598b3f';
         return config;
     },
     error => Promise.error(error))
@@ -70,45 +58,8 @@ instance.interceptors.response.use(
     // 请求成功
     res => {
         if(res.status === 200) {
-            // 状态码判断
-            switch (res.data.code) {
-                // 400参数的错误
-                case 400:
-                    iView.Message.error(res.data.msg);
-                    break;
-
-                // 401: 未登录状态，跳转登录页
-                case 401:
-                    store.commit('LOGOUT');
-                    setTimeout(() => {
-                        toLogin();
-                    }, 1000);
-                    break;
-                // 402没有接口权限
-                case 402:
-                    iView.Message.error(res.data.msg);
-                    break;
-
-                // 403 输入正确，但其它相关数据有问题，拒绝继续执行
-                case 403:
-                    iView.Message.error(res.data.msg);
-                    break;
-
-                // 404请求不存在
-                case 404:
-                    iView.Message.error('请求的资源不存在...');
-                    break;
-
-                // 200 正确返回
-                case 200:
-                    Promise.resolve(res)
-                    break;
-
-                default:
-                    iView.Message.error('服务器有点忙...');
-                    break;
-            }
-            return res.data;
+            Promise.resolve(res)
+            return res;
         }
         else
         {

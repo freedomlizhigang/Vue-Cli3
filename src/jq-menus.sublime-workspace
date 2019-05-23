@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"res",
+				"results"
+			],
+			[
 				"par",
 				"paramsMd5"
 			],
@@ -14,10 +18,6 @@
 			[
 				"ser",
 				"serve"
-			],
-			[
-				"res",
-				"response"
 			],
 			[
 				"de",
@@ -774,33 +774,35 @@
 	"expanded_folders":
 	[
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css"
 	],
 	"file_history":
 	[
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/http.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/dish.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/vue.config.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tc.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tcserve.js",
+		"/data/projects-coding/php/nodejs/cli-iview/vue.config.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/serve.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/index.html",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css/app.scss",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Home.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/main.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/www/index.html",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/client.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/cmd5.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/package.json",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tc.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/MD5.java",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package.json",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/http.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tcserve.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/device.js",
 		"/data/projects-coding/php/nodejs/cli-iview/src/vuex/modules/user.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/dish.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/vue.config.js",
-		"/data/projects-coding/php/nodejs/cli-iview/vue.config.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/api.js",
 		"/data/projects-coding/php/nodejs/cli-iview/src/api/http.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/serve.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/server.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/tc.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
@@ -925,6 +927,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"that.entries",
+			"res",
+			"Content-Type",
+			"axios",
 			"13.33rem",
 			"params",
 			"DevID",
@@ -1041,7 +1047,7 @@
 	"menu_visible": true,
 	"output.SublimeLinter":
 	{
-		"height": 0.0
+		"height": 126.0
 	},
 	"output.exec":
 	{

@@ -9,7 +9,7 @@
         <div class="s-c-content">
             <div class="s-c-item clearfix">
                 <span class="s-c-text f-l">资源更新：</span>
-                <a href="#" class="btn-m">更新资源包</a>
+                <a href="#" class="btn-m" @click="updateImg()">更新资源包</a>
             </div>
             <div class="s-c-item clearfix">
                 <span class="s-c-text f-l">设备号：</span>
@@ -36,7 +36,7 @@
                 <a href="#" class="btn-m">修改</a>
             </div>
         </div>
-        <div class="softcode">版本号：2.0.0 {{ res }}</div>
+        <div class="softcode">版本号：2.0.0</div>
     </section>
   </div>
 </template>
@@ -53,6 +53,7 @@ export default {
             serveurl:"http://121.69.101.22:9010",
             authcode:'0000',
             res:null,
+            entries:null,
         }
     },
     components: {
@@ -103,7 +104,66 @@ export default {
                 // if (res.code == 200) {
                 // }
             });
-        }
+        },
+        // 更新资源包
+        updateImg:function(){
+            let that = this;
+            //获取系统，指定文件夹内容
+            let wwwpath = cordova.file.applicationDirectory + "www/img/resource";
+            console.info(wwwpath);
+            //显示根目录内容
+            window.resolveLocalFileSystemURL(wwwpath, function (dirEntry) {
+                //显示根目录下的内容
+                var dirReader = dirEntry.createReader();
+                var entries = [];
+                var readEntries = function () {
+                    //返回FileEntry数组
+                    dirReader.readEntries(function (results) {
+                        // 没有更多了跳出
+                        if (!results.length) {
+                            showEntries(entries.sort());
+                        } else {
+                            entries = entries.concat(toArray(results));
+                            readEntries();
+                        }
+                    }, (err) => {
+                        console.info(err);
+                    });
+                }
+                readEntries();
+            });
+            function toArray(list) {  
+                return Array.prototype.slice.call(list || [], 0);  
+            } 
+            //显示读取结果，对比并删除与下载
+            function showEntries(entries) {
+                that.entries = entries;
+                let params = {'corpCode':'8888'};
+                that.$dish.resource(params).then((res)=>{
+                    let resData = res.data;
+                    console.log(resData);
+                    // 成功
+                    if (resData.success) {
+                        let newArr = resData.data;
+                        let oldArr = [];
+                        that.entries.forEach((item) => {
+                            if (item.isFile) {
+                                oldArr.push(item.name);
+                            }
+                        });
+                        // 开始对比
+                        let delArr = oldArr.filter(item=>!newArr.includes(item));
+                        let downloadArr = newArr.filter(item=>!oldArr.includes(item));
+                        // 开始删除与下载
+                    }
+                    else
+                    {
+                        alert('请求失败');
+                    }
+                });
+            }
+            
+        },
     }
 }
 </script>

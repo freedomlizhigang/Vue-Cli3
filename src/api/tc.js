@@ -7,10 +7,6 @@ import router from '.././router';
 import store from '.././vuex/store'
 import iView from 'iview';
 
-// 根目录
-const baseurl = store.getters.clienturl;
-axios.defaults.baseURL = baseurl;
-
 /**
   * 跳转登录页
   * 携带当前页面路由，以期在登录页面完成登录后返回当前页面
@@ -47,6 +43,9 @@ const errorHandle = (status, other) => {
 
 // 创建axios实例
 var instance = axios.create({timeout: 1000 * 12});
+// 根目录
+const baseurl = store.getters.clienturl;
+instance.defaults.baseURL = baseurl;
 // 设置post请求头
 instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 /**
