@@ -1,6 +1,6 @@
 <template>
   <div id="menutmpb1">
-    <img :data-src="'img/220345b9143f4175a7f3d8abb2c630b9/' + tempdata.templetImgUrl" class="swiper-lazy menuImg" width="100%" height="auto" alt="">
+    <img :data-src="imgPath + tempdata.templetImgUrl" class="swiper-lazy menuImg" width="100%" height="auto" alt="">
     <!-- 输出按钮 -->
     <btn-addcart v-for="(item, index) in dishItems" :dishitem="item" :dishindex="index"></btn-addcart>
   </div>
@@ -41,8 +41,13 @@ export default {
     components:{
         BtnAddcart,
     },
+    computed:{
+      imgPath(){
+        return cordova.file.documentsDirectory + "imgresource/";
+      }
+    },
     mounted() {
-        this.dishItems = this.tempdata.dishInfo[0].dishItems
+        console.log('B1 image:' + this.imgPath + this.tempdata.templetImgUrl)
     },
     watch:{
     	

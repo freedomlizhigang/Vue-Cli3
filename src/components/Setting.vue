@@ -54,6 +54,7 @@ export default {
             authcode:'0000',
             res:null,
             entries:null,
+            downloadNums:0,
         }
     },
     components: {
@@ -108,17 +109,24 @@ export default {
         // 更新资源包
         updateImg:function(){
             let that = this;
+            that.downloadStatus = !that.downloadStatus;
+            let endnum = 0;
+            const msg = that.$Message.loading({
+                            content: '正在下载图片...',
+                            duration: 0
+                        });
             //获取系统，指定文件夹内容
-            let wwwpath = cordova.file.applicationDirectory + "www/img/resource";
-            console.info(wwwpath);
+            let wwwpath = cordova.file.documentsDirectory + "imgresource";
+            var entries = [];
             //显示根目录内容
             window.resolveLocalFileSystemURL(wwwpath, function (dirEntry) {
+                console.log(dirEntry)
                 //显示根目录下的内容
                 var dirReader = dirEntry.createReader();
-                var entries = [];
                 var readEntries = function () {
                     //返回FileEntry数组
                     dirReader.readEntries(function (results) {
+                        console.log('hav img:' + results)
                         // 没有更多了跳出
                         if (!results.length) {
                             showEntries(entries.sort());
@@ -131,6 +139,19 @@ export default {
                     });
                 }
                 readEntries();
+            },(error) => {
+                console.log('makedir')
+                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+                    fs.root.getDirectory('imgresource', { create: true }, function (dirEntry) {
+                        console.log('目录创建成功！')
+                        showEntries(entries);
+                    }, (makeerror) => {
+                        console.log('makedir error:' + makeerror)
+                    });
+                }, (loaderror) => {
+                    console.log('loaddir error:' + loaderror)
+                });
+
             });
             function toArray(list) {  
                 return Array.prototype.slice.call(list || [], 0);  
@@ -141,10 +162,10 @@ export default {
                 let params = {'corpCode':'8888'};
                 that.$dish.resource(params).then((res)=>{
                     let resData = res.data;
-                    console.log(resData);
                     // 成功
                     if (resData.success) {
-                        let newArr = resData.data;
+                        let newArr = resData.data.dishNames;
+                        let url = resData.data.imgUrl;
                         let oldArr = [];
                         that.entries.forEach((item) => {
                             if (item.isFile) {
@@ -154,7 +175,22 @@ export default {
                         // 开始对比
                         let delArr = oldArr.filter(item=>!newArr.includes(item));
                         let downloadArr = newArr.filter(item=>!oldArr.includes(item));
+                        console.log('delArr:' + delArr.length)
+                        console.log('downloadArr:' + downloadArr.length)
+                        that.downloadNums = downloadArr.length;
+                        if (!that.downloadNums) {
+                            setTimeout(msg,200);
+                        }
                         // 开始删除与下载
+                        delArr.forEach((item) => {
+                            let file = wwwpath + '/' + item;
+                            that.removefile(file);
+                        });
+                        downloadArr.forEach((item) => {
+                            let file = item;
+                            console.log('filename :' + file)
+                            that.downfile(file,url);
+                        });
                     }
                     else
                     {
@@ -164,6 +200,58 @@ export default {
             }
             
         },
+        // remove file
+        removefile:function(file){
+            window.resolveLocalFileSystemURL(file, function (fileEntry) {
+                fileEntry.remove(function () {
+                    console.log('delete success');
+                }, function (err) {
+                    console.error(err);
+                }, function () {
+                    console.log('file not exist');
+                });
+            },(error) => {
+                console.log('removefile error:' + error)
+            })
+        },
+        // 下载图片
+        downfile:function(file,url){
+            window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
+                //创建文件
+                fs.root.getFile('imgresource/' + file, { create: true }, function (fileEntry) {
+                    download(fileEntry, url + file);
+                }, (error) => {
+                    console.log('getFile error:' + error)
+                });
+            }, (error) => {
+                console.log('download error:' + error)
+            });
+            function download(fileEntry, url) {
+                var ft = new FileTransfer();
+                var fileURL = fileEntry.toURL();
+                //监听下载进度
+                ft.onprogress = function (e) {
+                    console.info(e);
+                    if (e.lengthComputable) {
+                        console.log('当前进度：' + e.loaded / e.total);
+                    }
+                }
+                ft.download(url, fileURL, function (entry) {
+                    console.log('下载成功');
+                    endnum = endnum + 1;
+                    if (endnum == that.downloadNums) {
+                        setTimeout(msg, 300);
+                    }
+                }, function (err) {
+                    endnum = endnum + 1;
+                    if (endnum == that.downloadNums) {
+                        setTimeout(msg, 300);
+                    }
+                    console.log("下载失败！");
+                    console.info(err);
+                }, null, {});
+            }
+        }
     }
 }
 </script>

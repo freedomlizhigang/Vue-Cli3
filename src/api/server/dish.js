@@ -20,9 +20,9 @@ const dish = {
     resource (params) {
         return axiosHttp.post(api + 'dish/getMenuItemResource',params)
     },
-    // 修改
-    editinfo (params) {
-        return axiosHttp.post(api + 'admin/editinfo',qs.stringify(params))
+    // 菜谱信息大数组
+    menus (params) {
+        return axiosHttp.post(api + 'dish/menu',params)
     },
     // 修改个人资料
     selfeditinfo (params) {

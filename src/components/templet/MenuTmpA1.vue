@@ -1,6 +1,6 @@
 <template>
   <div id="menutmpa1" class="pr">
-    <img :data-src="'img/220345b9143f4175a7f3d8abb2c630b9/' + tempdata.templetImgUrl" class="swiper-lazy menuImg" width="100%" height="auto" alt="">
+    <img :data-src="imgPath + tempdata.templetImgUrl" class="swiper-lazy menuImg" width="100%" height="auto" alt="">
     <div class="btn-addcart b-a-1"></div>
   </div>
 </template>
@@ -28,7 +28,13 @@ export default {
             }
         }
     },
+    computed:{
+      imgPath(){
+        return cordova.file.documentsDirectory + "imgresource/";
+      }
+    },
     mounted() {
+        console.log('A1 image:' + this.imgPath + this.tempdata.templetImgUrl)
     },
     watch:{
     	
