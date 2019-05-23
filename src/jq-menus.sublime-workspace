@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"down",
+				"downloadArr"
+			],
+			[
+				"downl",
+				"downloadArr"
+			],
+			[
+				"remov",
+				"removefile"
+			],
+			[
 				"res",
 				"results"
 			],
@@ -502,18 +514,6 @@
 			[
 				"retur",
 				"return"
-			],
-			[
-				"cont",
-				"contents\t.contents()"
-			],
-			[
-				"sub",
-				"submit\t.submit()"
-			],
-			[
-				"goods",
-				"goodlists"
 			]
 		]
 	},
@@ -781,9 +781,14 @@
 	],
 	"file_history":
 	[
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA0.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpB1.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/http.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA1.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuItemList.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/dish.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/http.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/vue.config.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tc.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tcserve.js",
@@ -807,7 +812,6 @@
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/tc.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Member.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Pay.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Search.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/CreateOrder.vue",
@@ -816,14 +820,10 @@
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/store.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/config.xml",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/jihua.md",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuItemList.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router/routers.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Nofound.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package-lock.json",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/BtnAddcart.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpB1.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA1.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA0.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA2.vue",
 		"/data/projects-coding/php/nodejs/cli-iview/src/main.js",
 		"/data/projects-coding/ios/jq-menus/set.html",
@@ -927,6 +927,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"that",
+			"that.downloadNums",
+			"console.log",
+			"loaderror",
+			"errorHandle",
 			"that.entries",
 			"res",
 			"Content-Type",

@@ -91,7 +91,7 @@ export default {
                         clickable: true,
                         renderBullet: function (index, className) {
                             console.log('iconUrl :' + newArr[index].iconUrl)
-                            return '<span class="' + className + '"><img src="' + newArr[index].iconUrl + '" /></span>';
+                            return '<span class="' + className + '"><img src="' + that.imgPath + newArr[index].iconUrl + '" /></span>';
                         },
                   },
                 };
