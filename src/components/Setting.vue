@@ -33,7 +33,7 @@
             <div class="s-c-item clearfix">
                 <span class="s-c-text f-l">授权码：</span>
                 <input type="text" v-model="authcode" class="s-c-input sqcode">
-                <a href="#" class="btn-m">修改</a>
+                <a href="#" class="btn-m" @click="authCode()">修改</a>
             </div>
         </div>
         <div class="softcode">版本号：2.0.0</div>
@@ -44,7 +44,7 @@
 
 <script>
 import router from '.././router'
-import { DEVICE,REMOVE } from '.././vuex/mutation_types'
+import { MENUS } from '.././vuex/mutation_types'
 export default {
     name: 'Setting',
     data() {
@@ -55,6 +55,7 @@ export default {
             res:null,
             entries:null,
             downloadNums:0,
+            endnum:0,
         }
     },
     components: {
@@ -100,21 +101,80 @@ export default {
             var params = {"DevID":this.uuid};
             var that = this;
             this.$client.link(params).then(res=>{
-                    console.log(res)
-                    that.res = res;
-                // if (res.code == 200) {
-                // }
+                console.log(res)
+                let resData = res.data;
+                if (resData.errorCode == 200) {
+                    let data = {'corpCode':resData.cCorpCode,'devicecode':resData.DevCode};
+                    this.$store.commit(DEVICE,data)
+                }
+            });
+        },
+        // 授权码授权
+        authCode:function(){
+            let that = this;
+            const msg = that.$Message.loading({
+                            content: '正在登录...',
+                            duration: 0
+                        });
+            // 登录平板
+            let params = {
+                            "DevID": this.$store.getters.devicecode,     
+                            "DevVersion": "1.0.0.1",
+                            "DevNote": "平板点餐",
+                            "UserCode": this.authcode,
+                            "PWD": "0"
+                        };
+            this.$client.sjdl(params).then(res=>{
+                let resData = res.data;
+                if (resData.errorCode == 200) {
+                    let data = {'usercode':resData.UserCode};
+                    that.$store.commit(DEVICE,data)
+                    // 取员工信息
+                    let params2 = {
+                                    "authorizationCode": this.authcode
+                                };
+                    that.$dish.getauthinfo(params2).then(res=>{
+                        let resData = res.data;
+                        if (resData.code == 200) {
+                            console.log('获取员工信息成功')
+                        }
+                        else
+                        {
+                            setTimeout(msg,200);
+                            that.$Message.error('获取员工信息失败');
+                        }
+                    });
+                }
+                else
+                {
+                    setTimeout(msg,200);
+                    that.$Message.error('平板登录失败');
+                }
             });
         },
         // 更新资源包
         updateImg:function(){
             let that = this;
             that.downloadStatus = !that.downloadStatus;
-            let endnum = 0;
+            that.endnum = 0;
             const msg = that.$Message.loading({
                             content: '正在下载图片...',
                             duration: 0
                         });
+            // 缓存菜谱
+            let params = {'corpCode':'8888'};
+            that.$dish.menus(params).then((res)=>{
+                let resData = res.data;
+                // 成功
+                if (resData.success) {
+                    let data = {'menus':JSON.stringify(resData.data.menuItemColumnList)};
+                    this.$store.commit(MENUS,data)
+                }
+                else
+                {
+                    alert('请求菜谱失败');
+                }
+            });
             //获取系统，指定文件夹内容
             let wwwpath = cordova.file.documentsDirectory + "imgresource";
             var entries = [];
@@ -189,7 +249,7 @@ export default {
                         downloadArr.forEach((item) => {
                             let file = item;
                             console.log('filename :' + file)
-                            that.downfile(file,url);
+                            that.downfile(file,url,msg);
                         });
                     }
                     else
@@ -215,7 +275,8 @@ export default {
             })
         },
         // 下载图片
-        downfile:function(file,url){
+        downfile:function(file,url,msg){
+            let that = this;
             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fs) {
                 //创建文件
                 fs.root.getFile('imgresource/' + file, { create: true }, function (fileEntry) {
@@ -238,13 +299,13 @@ export default {
                 }
                 ft.download(url, fileURL, function (entry) {
                     console.log('下载成功');
-                    endnum = endnum + 1;
-                    if (endnum == that.downloadNums) {
+                    that.endnum = that.endnum + 1;
+                    if (that.endnum == that.downloadNums) {
                         setTimeout(msg, 300);
                     }
                 }, function (err) {
-                    endnum = endnum + 1;
-                    if (endnum == that.downloadNums) {
+                    that.endnum = that.endnum + 1;
+                    if (that.endnum == that.downloadNums) {
                         setTimeout(msg, 300);
                     }
                     console.log("下载失败！");

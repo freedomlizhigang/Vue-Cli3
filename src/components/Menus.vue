@@ -31,6 +31,7 @@ import $ from 'jquery'
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import MenuItemList from './templet/MenuItemList.vue'
+import { DEVICE,REMOVE,MENUS,REMOVEMENUS } from '.././vuex/mutation_types'
 import router from '.././router'
 export default {
     name: "Menus",
@@ -75,38 +76,32 @@ export default {
     },
     mounted() {
         var that = this;
-        let params = {'corpCode':'8888'};
-        that.$dish.menus(params).then((res)=>{
-            let resData = res.data;
-            // 成功
-            if (resData.success) {
-                let newArr = resData.data.menuItemColumnList;
-                let url = resData.data.resUrl;
-                console.log(newArr);
-                // 取到数组开始初始化
-                that.swiperSlides = newArr;
-                that.swiperOption = {
-                  pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                            console.log('iconUrl :' + newArr[index].iconUrl)
-                            return '<span class="' + className + '"><img src="' + that.imgPath + newArr[index].iconUrl + '" /></span>';
-                        },
-                  },
-                };
-                that.show = true;
-                if (that.findex != 0) {
-                    setTimeout(()=>{
-                        that.$refs.mySwiper.swiper.slideTo(that.findex, 1000, true); 
-                    },1000);
+        // 从缓存取，没有在取请求网络
+        let newArr = this.$store.getters.menus;
+        // console.log(newArr)
+        if (newArr == null || newArr == "undefined") {
+            let params = {'corpCode':'8888'};
+            that.$dish.menus(params).then((res)=>{
+                let resData = res.data;
+                // 成功
+                if (resData.success) {
+                    // console.log(newArr);
+                    let data = {'menus':JSON.stringify(resData.data.menuItemColumnList)};
+                    this.$store.commit(MENUS,data)
+                    // 取到数组开始初始化
+                    that.initSwipe(newArr);
                 }
-            }
-            else
-            {
-                alert('请求失败');
-            }
-        });
+                else
+                {
+                    alert('请求失败');
+                }
+            });
+        }
+        else
+        {
+            // 取到数组开始初始化
+            that.initSwipe(JSON.parse(newArr));
+        }
     },
     methods: {
         toSearch: function(){
@@ -114,6 +109,26 @@ export default {
         },
         slideOpen(){
             $(".list-open").slideToggle("fast");
+        },
+        initSwipe:function(newArr){
+            let that = this;
+            that.swiperSlides = newArr;
+            that.swiperOption = {
+              pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        // console.log('iconUrl :' + newArr[index].iconUrl)
+                        return '<span class="' + className + '"><img src="' + that.imgPath + newArr[index].iconUrl + '" /></span>';
+                    },
+              },
+            };
+            that.show = true;
+            if (that.findex != 0) {
+                setTimeout(()=>{
+                    that.$refs.mySwiper.swiper.slideTo(that.findex, 1000, true); 
+                },1000);
+            }
         }
     }
 }

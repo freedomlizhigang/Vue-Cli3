@@ -412,6 +412,7 @@
         name: 'Home',
         data () {
             return {
+                loading:false,
                 showOpenStatus:false,
                 device:null,
             };
@@ -419,6 +420,9 @@
         computed: {
         },
         created:function(){
+        },
+        mounted:function(){
+            this.getArea();
         },
         methods:{
             showOpen(){
@@ -428,6 +432,17 @@
             openTable(value){
                 router.push('/member');
             },
+            // 查询消费区域
+            getArea:function(){
+                let that = this;
+                that.$client.mo().then((res) => {
+                    let resData = res.data;
+                    console.log(resData)
+                    // if (resData.errorCode == 200) {
+
+                    // }
+                });
+            }
         }
   }
 </script>

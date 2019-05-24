@@ -47,7 +47,7 @@ export default {
       }
     },
     mounted() {
-        console.log('B1 image:' + this.imgPath + this.tempdata.templetImgUrl)
+        // console.log('B1 image:' + this.imgPath + this.tempdata.templetImgUrl)
     },
     watch:{
     	

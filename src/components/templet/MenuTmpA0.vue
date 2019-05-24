@@ -28,7 +28,7 @@ export default {
       }
     },
     mounted() {
-        console.log('A0 image:' + this.imgPath + this.tempdata.templetImgUrl)
+        // console.log('A0 image:' + this.imgPath + this.tempdata.templetImgUrl)
     },
     watch:{
     	

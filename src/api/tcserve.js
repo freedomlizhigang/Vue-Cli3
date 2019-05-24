@@ -45,7 +45,8 @@ const errorHandle = (status, other) => {
 // 创建axios实例
 var instance = axios.create({timeout: 1000 * 12});
 // 根目录
-const baseurl = store.getters.serveurl;
+// const baseurl = store.getters.serveurl;
+const baseurl = 'http://121.69.101.22:9010';
 instance.defaults.baseURL = baseurl;
 // 设置post请求头
 instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';

@@ -13,21 +13,15 @@ const router = new Router({
 
 // 导航钩子，全局钩子
 router.beforeEach((to, from, next) => {
-    // // 登录页面
-    // if (to.name === 'login') {
-    //     if (store.getters.token == '') {
-    //         next();
-    //     }
-    //     else
-    //     {
-    //         next('/console/index/index');
-    //     }
+    // 登录页面
+    // if (to.name === 'setting') {
+    //     next();
     // }
     // // 其它页面
     // else
     // {
-    //     if (store.getters.token == '' && to.meta.requiresAuth) {
-    //         next('/console/login');
+    //     if ((store.getters.usercode == null || store.getters.usercode == 'undefined') && to.meta.requiresAuth) {
+    //         next('/setting');
     //     }
     //     else
     //     {

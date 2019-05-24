@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"REMO",
+				"REMOVEMENUS\t(menus.js)"
+			],
+			[
+				"conso",
+				"console.log\t(Menus.vue)"
+			],
+			[
+				"new",
+				"newArr"
+			],
+			[
 				"down",
 				"downloadArr"
 			],
@@ -502,18 +514,6 @@
 			[
 				"tmp_for",
 				"tmp_format_name"
-			],
-			[
-				"bg",
-				"bg-primary \tBootstrap 3 Class"
-			],
-			[
-				"return",
-				"return"
-			],
-			[
-				"retur",
-				"return"
 			]
 		]
 	},
@@ -774,18 +774,22 @@
 	"expanded_folders":
 	[
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css"
 	],
 	"file_history":
 	[
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA0.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpB1.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Search.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Setting.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Menus.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/menus.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/device.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/index.html",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA0.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpA1.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuTmpB1.vue",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/store.js",
+		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/mutation_types.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/templet/MenuItemList.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/dish.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/http.js",
@@ -794,7 +798,6 @@
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/tcserve.js",
 		"/data/projects-coding/php/nodejs/cli-iview/vue.config.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/server/serve.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/index.html",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/public/css/app.scss",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Home.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/main.js",
@@ -804,7 +807,6 @@
 		"/Users/lizhigang/Documents/cordova/MyApp/package.json",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/MD5.java",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/package.json",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/device.js",
 		"/data/projects-coding/php/nodejs/cli-iview/src/vuex/modules/user.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/api/api.js",
 		"/data/projects-coding/php/nodejs/cli-iview/src/api/http.js",
@@ -813,11 +815,8 @@
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Welcome.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Member.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Pay.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Search.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/CreateOrder.vue",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/components/Logout.vue",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/mutation_types.js",
-		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/vuex/store.js",
 		"/Users/lizhigang/Documents/cordova/MyApp/config.xml",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/jihua.md",
 		"/Users/lizhigang/Documents/cordova/MyApp/Vue-Cli3/src/router/routers.js",
@@ -907,12 +906,11 @@
 		"/D/wwwroot/xty/resources/views/admin/gongx/threatdata/leaks/edit.blade.php",
 		"/D/wwwroot/xty/resources/views/admin/gongx/threatdata/safes/edit.blade.php",
 		"/D/wwwroot/xty/app/Models/ThreatLeak.php",
-		"/D/wwwroot/xty/app/Models/ThreatSafe.php",
-		"/D/wwwroot/xty/app/Models/ThreatWeak.php"
+		"/D/wwwroot/xty/app/Models/ThreatSafe.php"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -927,6 +925,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"endnum",
+			"device",
+			"console.log",
+			"device",
+			"uuid",
 			"that",
 			"that.downloadNums",
 			"console.log",

@@ -4,6 +4,7 @@ import { DEVICE,REMOVE } from './mutation_types'
 
 const state = {
     uuid: localStorage.getItem("uuid") || null,
+    usercode: localStorage.getItem("usercode") || null,
     devicecode: localStorage.getItem("devicecode") || null,
     cropcode: localStorage.getItem("cropcode") || '0000',
     clienturl: localStorage.getItem("clienturl") || null,
@@ -13,6 +14,9 @@ const state = {
 const getters = {
     uuid: state => {
         return state.uuid
+    },
+    usercode: state => {
+        return state.usercode
     },
     devicecode: state => {
         return state.devicecode
@@ -34,6 +38,10 @@ const mutations = {
             localStorage.setItem("uuid",data.uuid);
             state.uuid = data.uuid;
         }
+        if (data.usercode != undefined) {
+            localStorage.setItem("usercode",data.usercode);
+            state.usercode = data.usercode;
+        }
         if (data.devicecode != undefined) {
             localStorage.setItem("devicecode",data.devicecode);
             state.devicecode = data.devicecode;
@@ -53,11 +61,13 @@ const mutations = {
     },
     [REMOVE](state){
         localStorage.removeItem("uuid");  //移除localStorage
+        localStorage.removeItem("usercode");
         localStorage.removeItem("devicecode");
         localStorage.removeItem("cropcode");
         localStorage.removeItem("clienturl");
         localStorage.removeItem("serveurl");
         state.uuid = null
+        state.usercode = null
         state.devicecode = null;
         state.cropcode = '0000';
         state.clienturl = null;

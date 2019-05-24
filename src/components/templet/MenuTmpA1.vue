@@ -34,7 +34,7 @@ export default {
       }
     },
     mounted() {
-        console.log('A1 image:' + this.imgPath + this.tempdata.templetImgUrl)
+        // console.log('A1 image:' + this.imgPath + this.tempdata.templetImgUrl)
     },
     watch:{
     	
